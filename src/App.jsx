@@ -55,8 +55,10 @@ function App() {
     <div className="app">
       <div className="title">
         <h1 className="app-title">Memory Game</h1>
-        <h2 className="score-display">Score: {score}</h2>
-        <h2 className="high-score-display">High Score: {highScore}</h2>
+        <div className="score">
+          <h2 className="score-display">Score: {score}</h2>
+          <h2 className="high-score-display">High Score: {highScore}</h2>
+        </div>
       </div>
       <div className="card-area">
         {imageList.map((image) => {
