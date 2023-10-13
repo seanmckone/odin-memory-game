@@ -8,18 +8,18 @@ function App() {
   const [highScore, setHighScore] = useState(0);
   const [clickedIds, setClickedIds] = useState([]);
   const [imageList, setImageList] = useState([
-    "./src/assets/images/image1.jpg",
-    "./src/assets/images/image2.jpg",
-    "./src/assets/images/image3.jpg",
-    "./src/assets/images/image4.jpg",
-    "./src/assets/images/image5.jpg",
-    "./src/assets/images/image6.jpg",
-    "./src/assets/images/image7.jpg",
-    "./src/assets/images/image8.jpg",
-    "./src/assets/images/image9.jpg",
-    "./src/assets/images/image10.jpg",
-    "./src/assets/images/image11.jpg",
-    "./src/assets/images/image12.jpg",
+    "../src/assets/images/image1.jpg",
+    "../src/assets/images/image2.jpg",
+    "../src/assets/images/image3.jpg",
+    "../src/assets/images/image4.jpg",
+    "../src/assets/images/image5.jpg",
+    "../src/assets/images/image6.jpg",
+    "../src/assets/images/image7.jpg",
+    "../src/assets/images/image8.jpg",
+    "../src/assets/images/image9.jpg",
+    "../src/assets/images/image10.jpg",
+    "../src/assets/images/image11.jpg",
+    "../src/assets/images/image12.jpg",
   ]);
 
   useEffect(() => {
