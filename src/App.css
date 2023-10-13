@@ -1,10 +1,25 @@
 .app {
   display: flex;
   flex-direction: column;
+  max-width: 1400px;
+  align-items: center;
+  gap: 50px;
+  margin-top: 40px;
 }
 
 .card-area {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.app-title {
+  font-size: 40px;
+}
+
+.score-display,
+.high-score-display {
+  font-size: 20px;
 }

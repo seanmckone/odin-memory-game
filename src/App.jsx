@@ -8,6 +8,7 @@ function App() {
   const [highScore, setHighScore] = useState(0);
   const [clickedIds, setClickedIds] = useState([]);
   const [imageList, setImageList] = useState([
+    "src/assets/images/image1.jpg",
     "src/assets/images/image2.jpg",
     "src/assets/images/image3.jpg",
     "src/assets/images/image4.jpg",
@@ -42,12 +43,12 @@ function App() {
 
       setScore(0);
       setClickedIds([]);
-      const shuffledImages = shuffleArray([...imageList]);
-      setImageList(shuffledImages);
     } else {
       setClickedIds([...clickedIds, id]);
       setScore((score) => score + 1);
     }
+    const shuffledImages = shuffleArray([...imageList]);
+    setImageList(shuffledImages);
   }
 
   return (
@@ -58,12 +59,12 @@ function App() {
         <h2 className="high-score-display">High Score: {highScore}</h2>
       </div>
       <div className="card-area">
-        {imageList.map((image, index) => {
+        {imageList.map((image) => {
           return (
             <Card
-              key={index}
+              key={image}
               image={image}
-              onClick={() => handleClick(index)}
+              onClick={() => handleClick(image)}
             />
           );
         })}

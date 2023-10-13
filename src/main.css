@@ -11,4 +11,6 @@
 body {
   font-family: "Fira Code", sans-serif;
   background-color: white;
+  display: flex;
+  justify-content: center;
 }
