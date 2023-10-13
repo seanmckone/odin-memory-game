@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Fira Code";
+  src: url(assets/fonts/Fira_Code/FiraCode-VariableFont_wght.ttf);
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fira Code", sans-serif;
+  background-color: white;
+}

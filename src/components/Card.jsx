@@ -1,3 +1,5 @@
+import "../styles/Card.css";
+
 function Card({ image, onClick }) {
   return (
     <div className="card">

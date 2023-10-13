@@ -1,3 +1,5 @@
+import "./App.css";
+
 import { useState, useEffect } from "react";
 import Card from "./components/Card";
 
@@ -6,7 +8,6 @@ function App() {
   const [highScore, setHighScore] = useState(0);
   const [clickedIds, setClickedIds] = useState([]);
   const [imageList, setImageList] = useState([
-    "src/assets/images/image1.jpg",
     "src/assets/images/image2.jpg",
     "src/assets/images/image3.jpg",
     "src/assets/images/image4.jpg",
@@ -51,14 +52,22 @@ function App() {
 
   return (
     <div className="app">
-      <h1 className="app-title">Memory Game</h1>
-      <h2 className="score-display">Score: {score}</h2>
-      <h2 className="high-score-display">High Score: {highScore}</h2>
-      {imageList.map((image, index) => {
-        return (
-          <Card key={index} image={image} onClick={() => handleClick(index)} />
-        );
-      })}
+      <div className="title">
+        <h1 className="app-title">Memory Game</h1>
+        <h2 className="score-display">Score: {score}</h2>
+        <h2 className="high-score-display">High Score: {highScore}</h2>
+      </div>
+      <div className="card-area">
+        {imageList.map((image, index) => {
+          return (
+            <Card
+              key={index}
+              image={image}
+              onClick={() => handleClick(index)}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }
