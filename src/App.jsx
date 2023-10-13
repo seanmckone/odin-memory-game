@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Card from "./components/Card";
 
 function App() {
@@ -20,6 +20,19 @@ function App() {
     "src/assets/images/image12.jpg",
   ]);
 
+  useEffect(() => {
+    const shuffledImages = shuffleArray([...imageList]);
+    setImageList(shuffledImages);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  function shuffleArray(array) {
+    for (var i = 0; i < array.length; i++)
+      array.splice(Math.round(Math.random() * i), 0, array.pop());
+
+    return array;
+  }
+
   function handleClick(id) {
     if (clickedIds.includes(id)) {
       if (score > highScore) {
@@ -28,6 +41,8 @@ function App() {
 
       setScore(0);
       setClickedIds([]);
+      const shuffledImages = shuffleArray([...imageList]);
+      setImageList(shuffledImages);
     } else {
       setClickedIds([...clickedIds, id]);
       setScore((score) => score + 1);
